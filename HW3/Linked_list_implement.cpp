@@ -50,10 +50,10 @@ void StringList::removeFront(){
         delete old;
 }
 void StringList::printelem(){
-    while (!empty()) {
-      cout << front() <<endl;
-      removeFront();
-    }
+        while (!empty()) {
+                cout << front() <<endl;
+                removeFront();
+        }
 }
 
 
@@ -66,14 +66,14 @@ int main(int argc, char const *argv[]) {
         string elem1,elem2,elem3;
         cin >> elem1;
         cin >> elem2;
-        cin >> elem3;
+
         A.addFront(elem1);
         A.addFront(elem2);
+
+        A.printelem();//print out all the element;
+        cin >> elem3;
         A.addFront(elem3);
         A.printelem();//print out all the element;
-
-
-
 
 
         return 0;
