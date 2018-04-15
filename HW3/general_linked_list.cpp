@@ -56,3 +56,54 @@ void SLinkedList<E>::removeFront() { // remove front item
         head = old−>next; // skip over old head
         delete old; // delete the old head
 }
+
+///////////////////////////////////////////////////////
+class santa {
+public:
+string gift;
+int price;
+};
+///////////////////////////////////////////////////////
+int detect(SNode<santa>& );
+
+int main(int argc, char const *argv[]) {
+        //LNode giftlist;
+        int A;
+        SNode<santa> giftlist;
+        do {
+                A = detect(giftlist);
+                cout << A << endl;
+        } while(A);
+
+        return 0;
+}
+
+int detect(SNode<santa>& giftlist){
+        string A;
+        cin >> A;
+        santa item;
+        int d_price;
+        if (A=="InsertBack") {
+                cin >> item.gift;
+                cin >> item.price;
+                //giftlist.InsertBack(item);
+                //cout << "Gift been pushed Back in is :" << giftlist.front(item)<<endl;
+                return 1;
+        }else if(A=="InsertAfter") {
+                cin >> item.gift;
+                cin >> item.price;
+                //giftlist.InsertAfter(item);
+                //cout << "Gift been pushed After in is :" << giftlist.back(item)<<endl;
+                return 2;
+        }else if(A=="Delete") {
+                cin >> d_price;
+                //giftlist.Delete(d_price);
+                return 3;
+        }else if(A=="Reverse") {
+                //giftlist.Reverse();
+                return 4;
+        }else{
+                return 0;
+        }
+
+}
